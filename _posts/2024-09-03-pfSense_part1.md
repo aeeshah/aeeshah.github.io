@@ -7,7 +7,7 @@ categories: [Documentation,security,Home-lab]
 tags: [cybersecurity,security,home lab,mac m1,blue team,networking,pfSense]
 
 image: 
-    path: /assets/images/pfsense/pfSense0.png
+    path: /assets/images/pfSense/pfSense0.png
     alt: Cyber Security Home Lab Setup
 
 ---
