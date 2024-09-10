@@ -4,6 +4,7 @@ layout: post
 title: Building a Cybersecurity Lab Part 4 - Setting up Metasploitable 2 as a Target Machine on Mac M1 Using UTM 
 description: Learn how to install Metasploitable 2 on a Mac M1 using UTM with this step-by-step guide. Ideal for penetration testing and cybersecurity training.
 date: 05-09-2024  
+published: false 
 categories: [Documentation, security, Home-lab]  
 tags: [cybersecurity, security, home lab, mac m1, blue team, networking, pfSense]  
 

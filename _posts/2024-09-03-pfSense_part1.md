@@ -3,6 +3,7 @@
 layout: post
 title:  Building a Cybersecurity Lab Part 1- pfSense Basic Setup & Configuration.
 date: 03-09-2024
+published: false 
 categories: [Documentation,security,Home-lab]
 tags: [cybersecurity,security,home lab,mac m1,blue team,networking,pfSense]
 

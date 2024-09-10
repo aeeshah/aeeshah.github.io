@@ -4,6 +4,7 @@ layout: post
 title:  Building a Cybersecurity Lab Part 3 - pfSense Configurations
 description: Learn how to configure your pfSense firewall, assign static IPs, and set up rules for different subnets in your home lab. Follow along as we walk you through the pfSense interface, DNS resolver settings, and advanced configurations, ensuring a secure and efficient network environment.
 date: 05-09-2024
+published: false 
 categories: [Documentation,security,Home-lab]
 tags: [cybersecurity,security,home lab,mac m1,blue team,networking,pfSense]
 
