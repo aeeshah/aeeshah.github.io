@@ -1,12 +1,11 @@
 ---
 
 layout: post  
-title: Building a Cybersecurity Lab Part 4 - Setting up Metasploitable 2 as a Target Machine on Mac M1 Using UTM 
+title: Setting up Metasploitable 2 as a Target Machine on Mac M1 Using UTM 
 description: Learn how to install Metasploitable 2 on a Mac M1 using UTM with this step-by-step guide. Ideal for penetration testing and cybersecurity training.
-date: 05-09-2024  
-published: false 
+date: 08-07-2024  
 categories: [Documentation, security, Home-lab]  
-tags: [cybersecurity, security, home lab, mac m1, blue team, networking, pfSense]  
+tags: [Install Metasploitable, Metasploitable on Mac M1, penetration testing tools, UTM for Mac, Vulnerable VM, ethical hacking, cybersecurity training]  
 
 image:  
     path: /assets/images/meta/msf0.png  
@@ -14,7 +13,14 @@ image:
 
 ---
 
-After setting up pfSense, I decided to add **Metasploitable 2** as my target machine for penetration testing. **Metasploitable 2** is intentionally vulnerable, making it the perfect target for anyone wanting to practice ethical hacking in a controlled environment. In this post, I'll share how I set it up on my **Mac M1** with **UTM**.
+Metasploitable is an intentional vulnerable Linux virtual machine designed for testing and training in penetration testing. It’s a valuable tool for security enthusiasts and professionals alike, allowing you to practice your skills in a safe environment. If you’re using a Mac with an M1 chip, you might face some unique challenges during the installation process. This guide will walk you through everything you need to know to get Metasploitable up and running on your Mac M1.
+
+### **System Requirement**
+To successfully achieve this process, i used the following:
+
+- A Mac with Apple M1 Chip: Running macOS Big Sur or later.
+- Virtualization Software: We will use UTM, a free virtualization tool compatible with M1.
+- Metasploitable Image: Download the Metasploitable 2 image.
 
 
 ### **Step-by-Step Guide to Installing Metasploitable 2 on Mac M1**
@@ -56,7 +62,7 @@ With the **QCOW2** file ready, I opened **UTM** and created a new virtual machin
 
 1. Select **Emulate** and chose **Other** as the operating system.
 2. Set the architecture to `x86_64`.
-3. **Memory**: 512MB (plenty for Metasploitable 2).
+3. **Memory**: 512MB (plety for Metasploitable 2).
 4. **CPU**: 1 core.
 5. **Storage**: Imported the **QCOW2** file with at least 10GB of space.
 
@@ -69,7 +75,7 @@ I went with **Host-Only** mode for the network, which isolates the VM from my ma
 ![Network](/assets/images/meta/msf4.png){: w="400" h="200" }
    _Metasploitable Network Setting on UTM_
 
-#### ***Additional Settings*** 
+  
 Navigate to QEMU under setttings and uncheck the UEFI Boot
 ![remove boot](/assets/images/meta/msf5.png){: w="400" h="200" }
    _Metasploitable QEMU Setting on UTM_
@@ -86,14 +92,18 @@ The default login credentials were all I needed to access the system:
 - **Username**: `msfadmin`
 - **Password**: `msfadmin`
 
-#### **8. Verify Network Setup**
-To make sure my network was configured correctly, I ran the following command:
+#### **8. Verify Configuration**
+Once logged in, you can verify that Metasploitable is working by checking the available services. I ran the following command:
 
 ```bash
 ifconfig
 ```
+This will display the IP address assigned to the Metasploitable machine, which you can use for penetration testing.
+
 ![Meta Login](/assets/images/meta/msf7.png){: w="400" h="200" }
    _pfSense configuration on Metasploitable using UTM_
 
->pfSense will serve as the default gateway and firewall for the home lab. It’s important to boot the pfSense VM first, and once it’s running, the other VMs in the lab can be started.
-{: .prompt-info} 
+
+Follwoing this steps, you will successfully install Metasploitable on your Mac M1. This vulnerable machine is now ready for you to practice your penetration testing skills safely. Remember to always conduct your testing ethically and only on machines you own or have explicit permission to test.
+
+Happy Learning!
